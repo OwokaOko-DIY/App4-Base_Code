@@ -1,31 +1,28 @@
 <!DOCTYPE html> 
 <html> 
-<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+	<!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+	THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+	
+	Authors in chronological order of contribution:
+	Tim Riedel
+	Owoka Oko
+ 	
+	Further Information:
+	http://cns.utexas.edu/fri
+ 	
+	Research Educator:
+	Timothy Riedel
+	triedel@utexas.edu
+ 	
+	Brief Description of Goal of Code:
+	This code is meant to create an app that tells users whether they are most likely experiencing a flu or pneumonia based on symptoms.
+ 
+	Known Issues:
+	Image is now displaying on the live site. No issues as of now.
 
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
- 
- 
-Authors in chronological order of contribution:
-Tim Riedel
-Owoka Oko
- 
-Further Information:
-http://cns.utexas.edu/fri
- 
-Research Educator:
-Timothy Riedel
-triedel@utexas.edu
- 
-Brief Description of Goal of Code:
-This code is meant to create an app that tells users whether they are most likely experiencing a flu or pneumonia based on symptoms.
- 
-Known Issues:
-Image is now displaying on the live site. No issues as of now.
-
-References:
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
--->
+	References:
+	https://www.w3schools.com/w3css/default.asp
+	https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file-->
 	
    <head> 
       <title>Hello World</title>  
@@ -33,150 +30,145 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
       <link rel="stylesheet" href="w3-colors-flat.css">
-<!--meta section detailing important information such as how the app will be displayed and which devices are capable of opening it-->
+      <!--meta section detailing important information such as how the app will be displayed and which devices are capable of opening it-->
    </head> 
 
-
-<script>
-// Javascript section
+   <script>
+	// Javascript section
         var pneumonia_count = 0;
         var flu_count = 0;
-//Variables used in app (pneumonia and flu)
+	//Variables used in app (pneumonia and flu)
 	function pneumoniaAdd(){
             pneumonia_count = pneumonia_count + 1;
-		alert(pneumonia_count);
+	    alert(pneumonia_count);
         }
         function fluAdd(){
             flu_count = flu_count + 1;
         }
-//Function created to add counts for flu and pneumonia variables
+	//Function created to add counts for flu and pneumonia variables
 	function percentage(){
-		pneumoniapercentage = (pneumonia_count/4)*100
-		flupercentage = (flu_count/4)*100
-//Function created to calculate the resulting percentage of pneumonia count and flu count
-	var results = document.getElementById("results")
-		results.innerHTML = "Chance of Pneumonia =" + pneumoniapercentage + "%" + "<br> Chance of Flu =" + flupercentage + "%"
+	    pneumoniapercentage = (pneumonia_count/4)*100
+	    flupercentage = (flu_count/4)*100
+	    //Function created to calculate the resulting percentage of pneumonia count and flu count
+	    var results = document.getElementById("results")
+	    results.innerHTML = "Chance of Pneumonia =" + pneumoniapercentage + "%" + "<br> Chance of Flu =" + flupercentage + "%"
 	}
-//Variable for results and following code titling and describing resulting percentages
+	//Variable for results and following code titling and describing resulting percentages
   </script>
 
-<style>	
-/* Beginning of CSS Code*/	
-.body {
-     margin: 0em;
-}
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
-}
-/* Code detailing the page display details*/
-  .page:target {
-    left: 0vw;
-    z-index: 1;
-}
-</style>
-<style>
+  <style>	
+	/* Beginning of CSS Code*/	
+	.body {
+	margin: 0em;
+	}
+	
+	.page {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: -100vw;
+	overflow-y: auto;
+	z-index: 0;
+	background-color: hsl(0,0%,100%);
+	}
+	/* Code detailing the page display details*/
+  	.page:target {
+    	left: 0vw;
+    	z-index: 1;
+	}
+  </style>
+  <style>
        	img, object{
-            	max-height:90%;
-        		max-width:90%;
-        	}
-/* Code allowing image on first page to resive depending on screen size*/
-</style>
+        max-height:90%;
+        max-width:90%;
+        }
+	/* Code allowing image on first page to resive depending on screen size*/
+  </style>
 
-<body>
-<!-- HTML section-->
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>Pneumonia or Flu?</h1>
-<!--Header for first page of Website-->
-</div>
-	
-<div id="content" class="w3-container">
-	<p>Are you feeling like you might have the flu but wonder if it is pneumonia. Answer a few short questions to find out!</p>
-	
-	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
-	
-	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
- 	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-<!-- Code for introduction and disclaimer on front page-->
-	
-	<img src="https://www.piedmont.org/media/BlogImages/Pneumonia-vs-flu.jpg" alt="Man Suffering from Pneumonia or the Flu">
-<!-- Code for image on the cover page of website-->
-<div class="page" id="one">
+  <body>
+	<!-- HTML section-->
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
-<!-- Code for header displaying Question 1-->
-	</div>
-    	<div id="content" class="w3-container">
-		<p>Are you having difficulty breathing?</p>
-		<a href="#two" onclick="pneumoniaAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two" onclick="fluAdd();" class="w3-btn w3-black">No</a> 
-<!-- Codes coding for a yes or no in relation to the variables-->
-<!-- Code for Question 1 and page 1-->
-    	</div>
-</div>
-
-<div class="page" id="two">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 2</h1>
-<!-- Code for Question 2 header-->
+	  <h1>Pneumonia or Flu?</h1>
+	  <!--Header for first page of Website-->
 	</div>
 	
-	<div id="content2" class="w3-container">
-		<p>Do you have a headache?</p>
-<!--Coded paragraph for Question 2-->
-        	<a href="#three" onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#three" onclick="pneumoniaAdd();" class="w3-btn w3-black"> No</a>
-<!-- Code for Question 2 and page 2-->
-	</div>
-</div>	
-<div class="page" id="three">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
-	</div>
-<!-- Code for Question 3 code header-->
-	<div id="content3" class="w3-container">
-		<p>Do you have a runny nose?</p>
-        	<a href="#four" onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
-		<a href="#four" onclick="pneumoniaAdd();" class="w3-btn w3-black"> No</a>
-<!--Code for Question 3 and Page 3-->
-	</div>
-</div>	
-<div class="page" id="four">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Question 4</h1>
-	</div>
-	
-	<div id="content4" class="w3-container">
-		<p>Are you sweating?</p>
-		<a href="#results-page" onclick="pneumoniaAdd();" class="w3-btn w3-black"> Yes</a>
-        	<a href="#results-page" onclick="fluAdd();" class="w3-btn w3-black">No</a>
-<!-- Code for 'yes' or 'no' for two variables in Question 4-->
-<!-- Code for Question 4 and Page 4-->
-	</div>
-</div>	
-<div class="page" id="results-page">
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-<!--Code for header of results page-->
-	</div>
-	<div id="content5" class="w3-container">
-		<button class="w3-button w3-black" onclick="percentage()">Calculate</button>	
-		<p id="results"></p> 
-<!-- Code for page 5 and the final results page and button that produces calculation-->
+	<div id="content" class="w3-container">
+	  <p>Are you feeling like you might have the flu but wonder if it is pneumonia. Answer a few short questions to find out!</p>
+	  <a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	  <p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	  <p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	  <!-- Code for introduction and disclaimer on front page-->
+	  <img src="https://www.piedmont.org/media/BlogImages/Pneumonia-vs-flu.jpg" alt="Man Suffering from Pneumonia or the Flu">
+	  <!-- Code for image on the cover page of website-->
+	  <div class="page" id="one">
+		<div id="header" class="w3-container w3-flat-carrot">
+			<h1>Question 1</h1>
+			<!-- Code for header displaying Question 1-->
 		</div>
-	</div>
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
-<!-- Code for footer at the bottom of the page representing FRI stream-->
-</footer>
+    		<div id="content" class="w3-container">
+			<p>Are you having difficulty breathing?</p>
+			<a href="#two" onclick="pneumoniaAdd();" class="w3-btn w3-black"> Yes</a>
+         		<a href="#two" onclick="fluAdd();" class="w3-btn w3-black">No</a> 
+			<!-- Codes coding for a yes or no in relation to the variables-->
+			<!-- Code for Question 1 and page 1-->
+    		</div>
+	  </div>
 
-</body>
+	  <div class="page" id="two">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 2</h1>
+			<!-- Code for Question 2 header-->
+		</div>
+	
+		<div id="content2" class="w3-container">
+			<p>Do you have a headache?</p>
+			<!--Coded paragraph for Question 2-->
+        		<a href="#three" onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#three" onclick="pneumoniaAdd();" class="w3-btn w3-black"> No</a>
+			<!-- Code for Question 2 and page 2-->
+		</div>
+	  </div>	
+	  <div class="page" id="three">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 3</h1>
+		</div>
+		<!-- Code for Question 3 code header-->
+		<div id="content3" class="w3-container">
+			<p>Do you have a runny nose?</p>
+        		<a href="#four" onclick="fluAdd();" class="w3-btn w3-black">Yes</a>
+			<a href="#four" onclick="pneumoniaAdd();" class="w3-btn w3-black"> No</a>
+			<!--Code for Question 3 and Page 3-->
+		</div>
+	  </div>	
+	  <div class="page" id="four">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Question 4</h1>
+		</div>
+	
+		<div id="content4" class="w3-container">
+			<p>Are you sweating?</p>
+			<a href="#results-page" onclick="pneumoniaAdd();" class="w3-btn w3-black"> Yes</a>
+        		<a href="#results-page" onclick="fluAdd();" class="w3-btn w3-black">No</a>
+			<!-- Code for 'yes' or 'no' for two variables in Question 4-->
+			<!-- Code for Question 4 and Page 4-->
+		</div>
+	  </div>	
+	  <div class="page" id="results-page">
+		<div class="w3-container w3-flat-carrot">
+			<h1>Results</h1>
+			<!--Code for header of results page-->
+		</div>
+		<div id="content5" class="w3-container">
+			<button class="w3-button w3-black" onclick="percentage()">Calculate</button>	
+			<p id="results"></p> 
+			<!-- Code for page 5 and the final results page and button that produces calculation-->
+		</div>
+	  </div>
+	  <footer class="w3-bottom w3-container w3-flat-carrot">
+		<p>DIY!</p>
+		<!-- Code for footer at the bottom of the page representing FRI stream-->
+	  </footer>
+
+	  </body>
 </html>
